@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { getItems, getFilter } from '../../redux/contacts/contacts-selectors';
 import ContactListElement from './ContactListElement';
 // import { removeContact } from '../../redux/contacts/contacts-actions';
 import {
@@ -9,11 +10,16 @@ import {
 import styles from './ContactList.module.scss';
 
 const ContactList = () => {
-  const filteredContacts = useSelector(({ contacts: { items, filter } }) =>
-    items.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase()),
-    ),
+  const allContacts = useSelector(getItems);
+  const filter = useSelector(getFilter);
+  const filteredContacts = allContacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase()),
   );
+  // const filteredContacts = useSelector((getItems, getFilter) =>
+  //   items.filter(contact =>
+  //     contact.name.toLowerCase().includes(filter.toLowerCase()),
+  //   ),
+  // );
   const dispatch = useDispatch();
 
   useEffect(() => {
