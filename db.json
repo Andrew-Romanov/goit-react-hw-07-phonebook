@@ -1,0 +1,29 @@
+{
+  "contacts": [
+    {
+      "id": "fa379c1d-6dba-4bd6-b930-5d4375226a8e",
+      "name": "Andrew Romanov",
+      "number": "123-45-67"
+    },
+    {
+      "id": "134163e6-66c1-4a53-bc42-a841889e8c12",
+      "name": "John Deer",
+      "number": "123-45-67"
+    },
+    {
+      "id": "fc49bba5-76a7-49a7-98d0-24bec2e56cf1",
+      "name": "Debby Brown",
+      "number": "834-64-29"
+    },
+    {
+      "id": "e340aac6-2af0-4fed-b947-9eb3e82759ab",
+      "name": "Linda White",
+      "number": "999-99-99"
+    },
+    {
+      "id": "f27ec6c7-976b-4382-864d-8c4b69450039",
+      "name": "Larry Young",
+      "number": "834-64-29"
+    }
+  ]
+}
