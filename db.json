@@ -1,11 +1,6 @@
 {
   "contacts": [
     {
-      "id": "fa379c1d-6dba-4bd6-b930-5d4375226a8e",
-      "name": "Andrew Romanov",
-      "number": "123-45-67"
-    },
-    {
       "id": "134163e6-66c1-4a53-bc42-a841889e8c12",
       "name": "John Deer",
       "number": "123-45-67"

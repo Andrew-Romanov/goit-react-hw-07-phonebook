@@ -4,7 +4,6 @@ import { getFilter } from '../../redux/contacts/contacts-selectors';
 import styles from './Filter.module.scss';
 
 const Filter = () => {
-  // const filterValue = useSelector(state => state.contacts.filter);
   const filterValue = useSelector(getFilter);
   const dispatch = useDispatch();
 

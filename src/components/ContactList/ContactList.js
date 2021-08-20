@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getItems, getFilter } from '../../redux/contacts/contacts-selectors';
+import { getFilteredItems } from '../../redux/contacts/contacts-selectors';
 import ContactListElement from './ContactListElement';
-// import { removeContact } from '../../redux/contacts/contacts-actions';
 import {
   fetchItems,
   deleteItem,
@@ -10,20 +9,13 @@ import {
 import styles from './ContactList.module.scss';
 
 const ContactList = () => {
-  const allContacts = useSelector(getItems);
-  const filter = useSelector(getFilter);
-  const filteredContacts = allContacts.filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase()),
-  );
-  // const filteredContacts = useSelector((getItems, getFilter) =>
-  //   items.filter(contact =>
-  //     contact.name.toLowerCase().includes(filter.toLowerCase()),
-  //   ),
-  // );
+  const filteredContacts = useSelector(getFilteredItems);
+
   const dispatch = useDispatch();
 
+  console.log('Render');
+
   useEffect(() => {
-    // При первом рендере загружаем контакты из базы данных
     dispatch(fetchItems());
   }, [dispatch]);
 
@@ -37,7 +29,6 @@ const ContactList = () => {
                 name={name}
                 number={number}
                 whenDelete={() => dispatch(deleteItem(id))}
-                // whenDelete={() => dispatch(removeContact(id))}
               />
             </li>
           ))}

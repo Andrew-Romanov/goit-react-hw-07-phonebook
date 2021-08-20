@@ -37,7 +37,6 @@ export const addItem = contact => async dispatch => {
 
 export const deleteItem = id => async dispatch => {
   dispatch(deleteContactRequest());
-  // console.log('Delete: ', id);
 
   try {
     await axiosAPI.deleteContact(id);

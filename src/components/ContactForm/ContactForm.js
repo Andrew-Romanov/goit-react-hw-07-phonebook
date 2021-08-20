@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import styles from './ContactForm.module.scss';
 import store from '../../redux/store';
 import { addItem } from '../../redux/contacts/contacts-operations';
-// import { addContact } from '../../redux/contacts/contacts-actions';
 
 const ContactForm = () => {
   const [contact, setContact] = useState({ name: '', number: '' });
@@ -22,7 +21,6 @@ const ContactForm = () => {
     )
       return alert(`${contact.name} is already in contacts`);
 
-    // dispatch(addContact(contact));
     dispatch(addItem(contact));
 
     formReset();
